@@ -1,5 +1,7 @@
 package linkedList;
 
+import node.Node;
+
 public class LinkedList<T> {
 	
 	private Node<T> first; // Creating the first node
