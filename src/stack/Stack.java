@@ -7,11 +7,12 @@ public class Stack<T> {
 	private ArrayList<T> stack = new ArrayList<T>();
 	int top = -1; // Indicates the index of the top element. Starts at -1 to indicate that the list is empty;
 	
-	// Add element in the stack
+	// Add element to top of stack
 	public void push(T e) {
 		top++;
 		stack.add(top, e);
 	}
+	// Remove element to top of stack
 	public void pop() {
 		stack.remove(top);
 		top--;
@@ -19,8 +20,8 @@ public class Stack<T> {
 	public boolean isEmpty() {
 		return (top == -1);
 	}
-	public int top() {
-		return top;
+	public T top() {
+		return stack.get(top);
 	}
 
 	@Override
